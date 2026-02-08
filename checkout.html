@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 bg-[#FBF6F6] z-50">
+        <div>
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center px-5 justify-between h-20">
+                    <nav>
+                        <ul class="hidden lg:flex gap-10 text-xl font-normal inter ">
+                            <li><a href="index.html" class="  hover:underline">HOME</a></li>
+                            <li><a href="shop.html" class="hover:underline">SHOP</a></li>
+                            <li><a href="scent.html" class="hover:underline">SHOP BY
+                                    SCENT</a></li>
+                            <li><a href="about.html" class="hover:underline">ABOUT
+                                    US</a></li>
+                            <li> <a href="login.html" class="hover:underline">LOG
+                                    IN</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="text-center">
+                        <span class="text-2xl font-semibold ">BROOKLYN
+                            CANDLE</span>
+                        <p class="text-xl leading-normal arimo">STUDIO</p>
+                    </div>
+
+                    <div class="hidden lg:flex items-center space-x-5 text-lg">
+                        <span class="text-xl arimo font-light ">HOLIDAY
+                            QUIZ</span>
+                        <figure><a href="#"><img src="./img/icons/falg.png" alt="India"
+                                    class="w-8 h-8 object-cover"></a>
+                        </figure>
+                    </div>
+
+                    <div class="hidden lg:flex items-center space-x-5 text-lg">
+                        <figure><a href="#"><img src="./img/icons/user.png" alt="user"></a></figure>
+                        <figure><a href="#"><img src="./img/icons/search.png" alt="search"></a></figure>
+                        <figure><a href="card.html"><img src="./img/icons/bag.png" alt="bag"></a></figure>
+                        <figure><a href="#"><img src="./img/icons/grip.png" alt="grip"></a></figure>
+                    </div>
+
+                    <button id="menuBtn" class="lg:hidden text-2xl">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobileMenu" class="hidden lg:hidden">
+                <nav>
+                    <ul class="flex flex-col items-center py-6 space-y-4 text-sm tracking-wide">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li><a href="scent.html">SHOP BY SCENT</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="login.html">LOG IN</a></li>
+                        <li><a href="#">HOLIDAY QUIZ</a></li>
+                    </ul>
+                </nav>
+                <div class="flex flex-row lg:flex justify-center space-x-5 text-lg">
+                    <figure><a href="#"><img src="./img/icons/user.png" alt="user"></a></figure>
+                    <figure><a href="#"><img src="./img/icons/search.png" alt="search"></a></figure>
+                    <figure><a href="card.html"><img src="./img/icons/bag.png" alt="bag"></a></figure>
+                    <figure><a href="#"><img src="./img/icons/grip.png" alt="grip"></a></figure>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- checkout -->
+        <section class="container mx-auto">
+            <div class="grid lg:grid-cols-2 py-10">
+
+                <!-- Left side -->
+
+                <div class="px-4 sm:px-8 lg:px-16 py-10">
+                    <form class="space-y-10">
+                        <div class="text-center">
+                            <h2 class="text-2xl md:text-[32px] mb-16">Express checkout</h2>
+                            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                                <button type="button"
+                                    class="bg-indigo-600 text-white text-lg md:text-2xl font-bold px-10 md:px-20 py-3">
+                                    Shop
+                                </button>
+
+                                <button type="button"
+                                    class="bg-black text-white text-lg md:text-2xl px-10 md:px-20 py-3 flex items-center justify-center gap-3">
+                                    <img src="./img/checkout/g-pay.png" class="h-6">
+                                    <span class="font-bold">Pay</span>
+                                </button>
+                            </div>
+
+                            <div class="flex items-center gap-4 mt-8">
+                                <div class="flex-1 h-px bg-gray-300"></div>
+                                <span class="text-gray-500 text-lg md:text-2xl">OR</span>
+                                <div class="flex-1 h-px bg-gray-300"></div>
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <div class="flex justify-between items-center mb-10 mt-16">
+                                <span class="font-bold text-2xl md:text-[45px]">Contact</span>
+                                <a href="#" class="underline text-sm md:text-xl">Sign in</a>
+                            </div>
+                            <input type="email" placeholder="Email"
+                                class="w-full border px-4 py-3 mb-6 text-base md:text-2xl outline-none focus:border-black">
+
+                            <label class="flex items-center gap-2 text-sm md:text-base text-gray-600">
+                                <input type="checkbox">
+                                Email me with news and offers
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right side -->
+
+                <div class="bg-[#EBEBEB] py-10 px-4 sm:px-8 lg:px-12">
+                    <div class="space-y-6 max-w-5xl px-16 mx-auto">
+                        <div class="flex flex-col sm:flex-row mb-16 justify-between gap-6">
+                            <div class="flex gap-4">
+                                <div class="relative">
+                                    <span
+                                        class="absolute -top-2 -right-2 bg-black text-white text-sm md:text-xl w-6 h-6 md:w-7 md:h-8 flex items-center justify-center">
+                                        1
+                                    </span>
+                                    <img src="./img/checkout/small.png" class="w-24 md:w-[137px] h-auto object-cover">
+                                </div>
+                                <div class="mt-2">
+                                    <span class="font-bold text-lg md:text-[31px] block">
+                                        Pomander Holiday Candle
+                                    </span>
+                                    <button type="button" class="border px-3 text-sm md:text-[23px] mt-2">
+                                        Edit
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="font-normal text-lg md:text-2xl mt-2">
+                                Rs.5,900.00
+                            </p>
+                        </div>
+
+                        <form class="flex flex-col sm:flex-row gap-3">
+                            <input type="text" placeholder="Discount code or gift card"
+                                class="flex-1 text-base md:text-[21px] border px-4 py-2">
+
+                            <button type="submit"
+                                class="border border-gray-400 rounded-lg bg-[#D9D9D9] font-bold px-6 py-2">
+                                Apply
+                            </button>
+                        </form>
+
+                        <div class="space-y-6 text-base md:text-[24px]">
+                            <div class="flex justify-between">
+                                <span>Subtotal</span>
+                                <span>₹ 5,900.00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Shipping</span>
+                                <span class="text-gray-500">Enter shipping address</span>
+                            </div>
+                            <div class="flex justify-between font-semibold pt-3">
+                                <span>Total</span>
+                                <span>INR ₹ 5,900.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Delivery -->
+        <section class="px-16 sm:px-6 lg:px-8  lg:py-14">
+            <div class="container mx-auto">
+                <div class="max-w-4xl px-16">
+                    <form class="space-y-5 text-xl">
+                        <h2 class="text-[40px] mb-5 font-bold">Delivery</h2>
+                        <input type="text" name="country" placeholder="country"
+                            class="w-full border px-4 py-3 outline-none focus:border-black">
+                        </input>
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" name="first_name" placeholder="First name" class="border px-4 py-3">
+                            <input type="text" name="last_name" placeholder="Last name" class="border px-4 py-3">
+                        </div>
+                        <input type="text" name="company" placeholder="Company (optional)"
+                            class="w-full border px-4 py-3">
+
+                        <input type="text" name="address" placeholder="Address" class="w-full border px-4 py-3">
+
+                        <input type="text" name="apartment" placeholder="Apartment, suite, etc. (optional)"
+                            class="w-full border px-4 py-3">
+
+                        <div class="grid grid-cols-3 gap-4">
+
+                            <input type="text" name="city" placeholder="City" class="border px-4 py-3">
+                            <input type="text" name="State" placeholder="State" class="border px-4 py-3">
+                            <input type="text" name="pin" placeholder="PIN code" class="border px-4 py-3">
+
+                        </div>
+
+                        <input type="tel" name="phone" placeholder="Phone" class="w-full border px-4 py-3">
+
+                        <label class="flex items-center gap-3 text-xl">
+                            <input type="checkbox" name="offers">
+                            Text me with news and offers
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shipping method -->
+        <section class="px-4 sm:px-6 lg:px-10 py-10">
+            <div class="container mx-auto">
+                <div class="max-w-4xl px-16 space-y-4">
+
+                    <h2 class="text-xl sm:text-2xl lg:text-[45px] font-bold mb-10">
+                        Shipping method
+                    </h2>
+                    <div
+                        class="border rounded-md bg-[#F1F1F1] px-4 py-3 text-sm sm:text-base arimo lg:text-[20px] font-bold text-gray-600">
+                        Enter your shipping address to view available shipping methods.
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Payment -->
+        <section class="px-4 sm:px-6 lg:px-16 py-10">
+            <div class="container mx-auto">
+                <div class="max-w-4xl px-16 ">
+                    <form class="space-y-6">
+                        <div>
+                            <h2 class="text-xl sm:text-2xl lg:text-[45px] font-bold mb-5">
+                                Payment
+                            </h2>
+                            <p class="text-[20px] font-bold arimo">
+                                All transactions are secure and encrypted
+                            </p>
+                        </div>
+
+                        <label class="flex items-center justify-between  rounded-md p-4 cursor-pointer">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="payment" checked>
+                                <span class="text-sm sm:text-base arimo lg:text-[20px]">Credit card</span>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <img src="./img/checkout/visa.png" class="h-10">
+                                <img src="./img/checkout/mastercard.png" class="h-7">
+                                <img src="./img/checkout/Group.png" class="h-7">
+                                <span class=" px-3 py-1 border text-xl rounded-md">+5</span>
+                            </div>
+                        </label>
+
+                        <label class="block border rounded-md p-4 cursor-pointer bg-[#F1F1F1]">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <input type="radio" name="payment">
+                                    <span class="font-bold arimo lg:text-[20px]">
+                                        Shop Pay
+                                    </span>
+                                    <span class="text-[20px] arimo text-gray-500">
+                                        Pay in full or in installments
+                                    </span>
+                                </div>
+                                <span class="text-blue-600 font-bold arimo text-xl">
+                                    Shop
+                                </span>
+                            </div>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Billing address -->
+        <section class="px-4 sm:px-6 lg:px-16 py-10">
+            <div class="container mx-auto">
+                <div class="max-w-4xl px-16 space-y-5">
+                    <h2 class="text-xl sm:text-2xl mb-10 lg:text-[45px] font-bold">
+                        Billing address
+                    </h2>
+                    <form>
+                        <label class="flex items-center gap-3 border p-4 text-xl cursor-pointer">
+                            <input type="radio" name="billing" checked>
+                            Same as shipping address
+                        </label>
+
+                        <label class="flex items-center gap-3 border p-4 text-xl bg-[#F1F1F1] cursor-pointer">
+                            <input type="radio" name="billing">
+                            Use a different billing address
+                        </label>
+
+                        <div id="billingForm" class="bg-[#F1F1F1] p-5 text-xl  space-y-4 ">
+
+                            <input type="text" placeholder="country" class="w-full border px-4 py-3 ">
+                            </input>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <input type="text" placeholder="First name" class="border px-4 py-3 rounded-md w-full">
+
+                                <input type="text" placeholder="Last name" class="border px-4 py-3 rounded-md w-full">
+                            </div>
+
+                            <input type="text" placeholder="Company (optional)"
+                                class="border px-4 py-3 rounded-md w-full">
+
+                            <div class="relative">
+                                <input type="text" placeholder="Address"
+                                    class="border px-4 py-3 rounded-md w-full pr-10">
+
+                                <i
+                                    class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 -translate-y-1/2 text-gray-600"></i>
+                            </div>
+
+                            <input type="text" placeholder="Apartment, suite, etc. (optional)"
+                                class="border px-4 py-3 rounded-md w-full">
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <input type="text" placeholder="City" class="border px-4 py-3 rounded-md">
+
+                                <input type="text" placeholder="State" class="border px-4 py-3 rounded-md">
+
+                                <input type="text" placeholder="PIN code" class="border px-4 py-3 rounded-md">
+                            </div>
+                            <input type="tel" placeholder="Phone (optional)" class="border px-4 py-3 rounded-md w-full">
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-black text-white py-3 font-bold text-xl arimo mt-10 hover:bg-gray-300 border hover:text-black">
+                            Pay now
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="border-t border-black px-20 mt-10">
+        <div class="container mx-auto">
+            <div class="max-w-6xl px-10 py-10">
+                <ul class="flex flex-wrap gap-4 sm:gap-6 text-[20px] arimo">
+                    <li>
+                        <a href="#" class=" border-b-2 border-black">
+                            Refund policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class=" border-b-2 border-black">
+                            Shipping
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class=" border-b-2 border-black">
+                            Privacy policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class=" border-b-2 border-black">
+                            Terms of services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class=" border-b-2 border-black">
+                            Cancellation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class=" border-b-2 border-black">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

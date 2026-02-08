@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brooklyn Candle </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Top Header -->
+    <div class="bg-black text-white text-center text-2xl inter font-light tracking-widest py-7">
+        <span>COMPLIMENTARY SHIPPING WITH ORDERS $100+</span>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-[#FBF6F6] z-50">
+        <div>
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center px-5 justify-between h-20">
+                    <nav>
+                        <ul class="hidden lg:flex gap-10 text-xl font-normal inter ">
+                            <li><a href="index.html" class="  border-b-2 border-black">HOME</a></li>
+                            <li><a href="shop.html" class="hover:underline">SHOP</a></li>
+                            <li><a href="scent.html" class="hover:underline">SHOP BY
+                                    SCENT</a></li>
+                            <li><a href="about.html" class="hover:underline">ABOUT
+                                    US</a></li>
+                            <li> <a href="login.html" class="hover:underline">LOG
+                                    IN</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="text-center">
+                        <span class="text-2xl font-semibold ">BROOKLYN
+                            CANDLE</span>
+                        <p class="text-xl leading-normal arimo">STUDIO</p>
+                    </div>
+
+                    <div class="hidden lg:flex items-center space-x-5 text-lg">
+                        <span class="text-xl arimo font-light ">HOLIDAY
+                            QUIZ</span>
+                        <figure><a href="#"><img src="./img/icons/falg.png" alt="India"
+                                    class="w-8 h-8 object-cover"></a>
+                        </figure>
+                    </div>
+
+                    <div class="hidden lg:flex items-center space-x-5 text-lg">
+                        <figure><a href="#"><img src="./img/icons/user.png" alt="user"></a></figure>
+                        <figure><a href="#"><img src="./img/icons/search.png" alt="search"></a></figure>
+                        <figure><a href="card.html"><img src="./img/icons/bag.png" alt="bag"></a></figure>
+                        <figure><a href="#"><img src="./img/icons/grip.png" alt="grip"></a></figure>
+                    </div>
+
+                    <button id="menuBtn" class="lg:hidden text-2xl">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobileMenu" class="hidden lg:hidden">
+                <nav>
+                    <ul class="flex flex-col items-center py-6 space-y-4 text-sm tracking-wide">
+                        <li><a href="index.html" class="border-b-2 border-black">HOME</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li><a href="scent.html">SHOP BY SCENT</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="login.html">LOG IN</a></li>
+                        <li><a href="#">HOLIDAY QUIZ</a></li>
+                    </ul>
+                </nav>
+                <div class="flex flex-row lg:flex justify-center space-x-5 text-lg">
+                    <figure><a href="#"><img src="./img/icons/user.png" alt="user"></a></figure>
+                    <figure><a href="#"><img src="./img/icons/search.png" alt="search"></a></figure>
+                    <figure><a href="card.html"><img src="./img/icons/bag.png" alt="bag"></a></figure>
+                    <figure><a href="#"><img src="./img/icons/grip.png" alt="grip"></a></figure>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section>
+            <div class="relative h-[95vh] overflow-hidden border-b-4 border-white">
+                <div id="slider" class="absolute inset-0">
+                    <img src="./img/banner/banner-1.png"
+                        class="absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity duration-1000">
+                    <img src="./img/banner/banner-2.png"
+                        class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000">
+                    <img src="./img/banner/banner-3.png"
+                        class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000">
+                    <img src="./img/banner/banner-4.png"
+                        class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-1000">
+                </div>
+
+                <div class="relative z-10 h-full flex items-center">
+                    <div class="container mx-auto">
+                        <div class="max-w-7xl text-white space-y-4 ml-24">
+                            <p class="uppercase tracking-[3px] leading-none text-xl inter font-light ">Turn
+                                Up The Cheer
+                            </p>
+
+                            <h1 class="text-4xl md:text-[84px]  font-light">
+                                <span class="block text-[#FBF3B1] ">Fragrance
+                                    That</span>
+                                <span class="block text-[#FBF3B1] leading-loose">Feels
+                                    Like <span class="italic text-[#FFFFFF]">HOME</span></span>
+                            </h1>
+
+                            <p class="text-sm  tracking-[2px] font-thin">
+                                Soft flames, delicate notes, unforgettable
+                                ambience
+                            </p>
+
+                            <button
+                                class="bg-white text-black px-7 py-4 text-sm tracking-wide hover:bg-black hover:text-white ">
+                                SHOP THE COLLECTION
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Cards Section -->
+        <section>
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+                    <div class="relative overflow-hidden group">
+                        <img src="./img/shop-1.png" alt="img"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 flex flex-col items-center  text-white mt-14 text-center ">
+                            <span class="text-3xl tracking-wide inter">Fireplace</span>
+                            <p class="text-base font-thin tracking-wide charam mt-5">Smells
+                                like: A smoky cabin
+                                fireplace
+                            </p>
+                            <button
+                                class="mt-9 border px-10 py-3 text-base tracking-widest hover:bg-white hover:text-black ">
+                                SHOP NOW
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden group">
+                        <img src="./img/shop-2.png" alt="img"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 flex flex-col items-center text-white mt-14 text-center ">
+                            <h2 class="text-3xl inter tracking-wide">Pomander</h2>
+                            <p class="text-base font-thin tracking-wide charam mt-5">Smells
+                                like: Citrus and spice</p>
+                            <button
+                                class="mt-9 border px-10 py-3 text-base tracking-widest hover:bg-white hover:text-black">
+                                SHOP NOW
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden group">
+                        <img src="./img/shop-3.png" alt="img"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 flex flex-col items-center text-white mt-14 text-center">
+                            <h2 class="text-3xl inter tracking-wide">Cypress
+                                Tree</h2>
+                            <p class="text-base font-thin tracking-wide charam mt-5">Smells
+                                like: Christmas tree</p>
+                            <button
+                                class="mt-9 border px-10 py-3 text-base tracking-widest hover:bg-white hover:text-black">
+                                SHOP NOW
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative overflow-hidden group">
+                        <img src="./img/shop-4.png" alt="img"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 flex flex-col items-center text-white mt-14 text-center">
+                            <h2 class="text-3xl inter tracking-wide">Wild
+                                Fig</h2>
+                            <p class="text-base font-thin tracking-wide charam mt-5">Smells
+                                like: Lush figs</p>
+                            <button
+                                class="mt-9 border px-10 py-3 text-base tracking-widest hover:bg-white hover:text-black">
+                                SHOP NOW
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-16 text-center">
+                    <h2 class="text-5xl tracking-wide">
+                        Thousands of Cozy Moments (and Counting)
+                    </h2>
+                    <p class="mt-4 text-3xl">
+                        4.8 <i class="fa-solid fa-star text-yellow-400 "></i>
+                        Based on 2970 Reviews
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Silder Cards Section -->
+        <section class="bg-[#FCDFDF] px-4 py-20">
+            <div class="container mx-auto">
+                <div class="overflow-hidden">
+                    <div id="reviewSlider" class="flex transition-transform duration-800 ease-in-out gap-x-[50px]">
+
+                        <div class="w-full lg:w-1/2 flex-shrink-0 bg-white grid grid-cols-2">
+                            <img src="./img/Rectangle-1.png" class="w-full h-full object-cover">
+
+                            <div class="p-10 flex flex-col justify-between">
+                                <p class=" text-base py-[160px]  arimo">
+                                    Candle filled the room w warm scent even
+                                    before I lit it.
+                                    Makes the whole house feel like fall!
+                                </p>
+
+                                <div>
+                                    <p class="font-semibold underline text-xl mb-[60px]">
+                                        Santorini Classic Wick Candle
+                                    </p>
+
+                                    <div class="flex justify-between items-center border-t pt-4">
+                                        <div class="flex items-center gap-2">
+                                            <span class=" text-[39px] rounded-full flex items-center justify-center">
+                                                <i class="fa-regular fa-circle-user"></i>
+                                            </span>
+                                            <span class="arimo text-xl">Carolyn</span>
+                                        </div>
+
+                                        <span class="text-yellow-400 sm:text-sm   text-lg">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:w-1/2 flex-shrink-0 bg-white grid grid-cols-2">
+                            <img src="./img/Rectangle-2.png" class="w-full h-full object-cover">
+
+                            <div class="p-10 flex flex-col justify-between">
+                                <p class=" text-base py-[160px]  arimo">
+                                    Candle filled the room w warm scent even
+                                    before I lit it.
+                                    Makes the whole house feel like fall!
+                                </p>
+
+                                <div>
+                                    <p class="font-semibold underline text-xl mb-[60px]">
+                                        Santorini Classic Wick Candle
+                                    </p>
+
+                                    <div class="flex justify-between items-center border-t pt-4">
+                                        <div class="flex items-center gap-2">
+                                            <span class=" text-[39px] rounded-full flex items-center justify-center">
+                                                <i class="fa-regular fa-circle-user"></i>
+                                            </span>
+                                            <span class="arimo text-xl">Carolyn</span>
+                                        </div>
+
+                                        <span class="text-yellow-400  sm:text-sm  text-lg">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:w-1/2 flex-shrink-0 bg-white grid grid-cols-2">
+                            <img src="./img/Rectangle-3.png" class="w-full h-full object-cover">
+
+                            <div class="p-10 flex flex-col justify-between">
+                                <p class=" text-base py-[160px]  arimo">
+                                    Candle filled the room w warm scent even
+                                    before I lit it.
+                                    Makes the whole house feel like fall!
+                                </p>
+
+                                <div>
+                                    <p class="font-semibold underline text-xl mb-[60px]">
+                                        Santorini Classic Wick Candle
+                                    </p>
+
+                                    <div class="flex justify-between items-center border-t pt-4">
+                                        <div class="flex items-center gap-2">
+                                            <span class=" text-[39px] rounded-full flex items-center justify-center">
+                                                <i class="fa-regular fa-circle-user"></i>
+                                            </span>
+                                            <span class="arimo text-xl">Carolyn</span>
+                                        </div>
+
+                                        <span class="text-yellow-400  sm:text-sm  text-lg">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:w-1/2 flex-shrink-0 bg-white grid grid-cols-2">
+                            <img src="./img/Rectangle-4.png" class="w-full h-full object-cover">
+
+                            <div class="p-10 flex flex-col justify-between">
+                                <p class=" text-base py-[160px]  arimo">
+                                    Candle filled the room w warm scent even
+                                    before I lit it.
+                                    Makes the whole house feel like fall!
+                                </p>
+
+                                <div>
+                                    <p class="font-semibold underline text-xl mb-[60px]">
+                                        Santorini Classic Wick Candle
+                                    </p>
+
+                                    <div class="flex justify-between items-center border-t pt-4">
+                                        <div class="flex items-center gap-2">
+                                            <span class=" text-[39px] rounded-full flex items-center justify-center">
+                                                <i class="fa-regular fa-circle-user"></i>
+                                            </span>
+                                            <span class="arimo text-xl">Carolyn</span>
+                                        </div>
+
+                                        <span class="text-yellow-400 sm:text-sm   text-lg">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:w-1/2 flex-shrink-0 bg-white grid grid-cols-2">
+                            <img src="./img/Rectangle-1.png" class="w-full h-full object-cover">
+
+                            <div class="p-10 flex flex-col justify-between">
+                                <p class=" text-base py-[160px]  arimo">
+                                    Candle filled the room w warm scent even
+                                    before I lit it.
+                                    Makes the whole house feel like fall!
+                                </p>
+
+                                <div>
+                                    <p class="font-semibold underline text-xl mb-[60px]">
+                                        Santorini Classic Wick Candle
+                                    </p>
+
+                                    <div class="flex justify-between items-center border-t pt-4">
+                                        <div class="flex items-center gap-2">
+                                            <span class=" text-[39px] rounded-full flex items-center justify-center">
+                                                <i class="fa-regular fa-circle-user"></i>
+                                            </span>
+                                            <span class="arimo text-xl">Carolyn</span>
+                                        </div>
+
+                                        <span class="text-yellow-400  sm:text-sm  text-lg">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:w-1/2 flex-shrink-0 bg-white grid grid-cols-2">
+                            <img src="./img/Rectangle-2.png" class="w-full h-full object-cover">
+
+                            <div class="p-10 flex flex-col justify-between">
+                                <p class=" text-base py-[160px]  arimo">
+                                    Candle filled the room w warm scent even
+                                    before I lit it.
+                                    Makes the whole house feel like fall!
+                                </p>
+
+                                <div>
+                                    <p class="font-semibold underline text-xl mb-[60px]">
+                                        Santorini Classic Wick Candle
+                                    </p>
+
+                                    <div class="flex justify-between items-center border-t pt-4">
+                                        <div class="flex items-center gap-2">
+                                            <span class=" text-[39px] rounded-full flex items-center justify-center">
+                                                <i class="fa-regular fa-circle-user"></i>
+                                            </span>
+                                            <span class="arimo text-xl">Carolyn</span>
+                                        </div>
+
+                                        <span class="text-yellow-400 sm:text-sm   text-lg">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:w-1/2 flex-shrink-0 bg-white grid grid-cols-2">
+                            <img src="./img/Rectangle-3.png" class="w-full h-full object-cover">
+
+                            <div class="p-10 flex flex-col justify-between">
+                                <p class=" text-base py-[160px]  arimo">
+                                    Candle filled the room w warm scent even
+                                    before I lit it.
+                                    Makes the whole house feel like fall!
+                                </p>
+
+                                <div>
+                                    <p class="font-semibold underline text-xl mb-[60px]">
+                                        Santorini Classic Wick Candle
+                                    </p>
+
+                                    <div class="flex justify-between items-center border-t pt-4">
+                                        <div class="flex items-center gap-2">
+                                            <span class=" text-[39px] rounded-full flex items-center justify-center">
+                                                <i class="fa-regular fa-circle-user"></i>
+                                            </span>
+                                            <span class="arimo text-xl">Carolyn</span>
+                                        </div>
+
+                                        <span class="text-yellow-400 sm:text-sm   text-lg">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:w-1/2 flex-shrink-0 bg-white grid grid-cols-2">
+                            <img src="./img/Rectangle-4.png" class="w-full h-full object-cover">
+
+                            <div class="p-10 flex flex-col justify-between">
+                                <p class=" text-base py-[160px]  arimo">
+                                    Candle filled the room w warm scent even
+                                    before I lit it.
+                                    Makes the whole house feel like fall!
+                                </p>
+
+                                <div>
+                                    <p class="font-semibold underline text-xl mb-[60px]">
+                                        Santorini Classic Wick Candle
+                                    </p>
+
+                                    <div class="flex justify-between items-center border-t pt-4">
+                                        <div class="flex items-center gap-2">
+                                            <span class=" text-[39px] rounded-full flex items-center justify-center">
+                                                <i class="fa-regular fa-circle-user"></i>
+                                            </span>
+                                            <span class="arimo text-xl">Carolyn</span>
+                                        </div>
+
+                                        <span class="text-yellow-400  sm:text-sm  text-lg">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>.
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Section -->
+        <section class="bg-white px-4 py-20">
+            <div class="container mx-auto">
+                <div class=" grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="relative group overflow-hidden">
+                        <img src="./img/Next-section/1.png" alt="img"
+                            class="w-full h-[898px] object-cover transition-transform duration-700">
+
+                        <!-- overlay -->
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-500"></div>
+                        <div
+                            class="absolute inset-0 flex flex-col  py-[130px]   items-center text-white text-center px-6">
+                            <p class="text-4xl arimo tracking-wide">October’s
+                                First Friday Flame</p>
+                            <h2 class="text-4xl arimo font-semibold mt-4 tracking-wide">APPLE
+                                SUGAR</h2>
+                            <p class="text-2xl arimo  mt-8 ">
+                                <span class="charam">Smells like:</span> A
+                                warm, caramel glazed, honeycrisp apple.
+                            </p>
+                            <a href="#"
+                                class="mt-8 bg-white text-black px-4 py-2 text-2xl tracking-wide arimo hover:bg-black hover:text-white transition">
+                                Shop Apple Sugar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden">
+                        <img src="./img/Next-section/2.png" alt="img"
+                            class="w-full h-[898px] object-cover transition-transform duration-700 ">
+
+                        <!-- overlay -->
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-500"></div>
+                        <div
+                            class="absolute inset-0 flex flex-col py-[130px]  items-center text-white text-center px-6">
+                            <p class="text-4xl arimo tracking-wide">NEW
+                                SCENT</p>
+                            <h2 class="text-4xl font-semibold mt-4 arimo tracking-wide">KYOTO
+                                WOODS</h2>
+                            <p class="text-2xl arimo mt-8 ">
+                                <span class="charam">Smells like:</span> A
+                                cedar forest after rain.
+                            </p>
+                            <a href="#"
+                                class="mt-8 bg-white text-black px-4 py-2 text-2xl tracking-wide arimo hover:bg-black hover:text-white transition">
+                                Shop Kyoto Woods
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- animate Section -->
+        <section class="  bg-white">
+            <div class="container mx-auto px-4 overflow-hidden">
+                <div id="imgSlider" class="flex gap-6 will-change-transform">
+                    <img src="./img/animate/1.png"
+                        class="w-[388px] sm:w-[40vw] lg:w-[25vw] h-[377px] object-cover shrink-0">
+                    <img src="./img/animate/2.png"
+                        class="w-[388px] sm:w-[40vw] lg:w-[25vw] h-[377px] object-cover shrink-0">
+                    <img src="./img/animate/3.png"
+                        class="w-[388px] sm:w-[40vw] lg:w-[25vw] h-[377px] object-cover shrink-0">
+                    <img src="./img/animate/4.png"
+                        class="w-[388px] sm:w-[40vw] lg:w-[25vw] h-[377px] object-cover shrink-0">
+                    <img src="./img/animate/5.png"
+                        class="w-[388px] sm:w-[40vw] lg:w-[25vw] h-[377px] object-cover shrink-0">
+                    <img src="./img/animate/6.png"
+                        class="w-[388px] sm:w-[40vw] lg:w-[25vw] h-[377px] object-cover shrink-0">
+                    <img src="./img/animate/7.png"
+                        class="w-[388px] sm:w-[40vw] lg:w-[25vw] h-[377px] object-cover shrink-0">
+                    <img src="./img/animate/8.png"
+                        class="w-[388px] sm:w-[40vw] lg:w-[25vw] h-[377px] object-cover shrink-0">
+                </div>
+            </div>
+        </section>
+
+        <!-- Hover img Section -->
+        <section class="py-20 px-4 bg-white">
+            <h2 class="text-center lg:text-6xl md:text-6xl sm:text-6xl tracking-widest mb-20">BESTSELLERS</h2>
+
+            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 px-4">
+
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <span class="absolute right-0 bg-white text-2xl px-5 py-2 z-10 text-right">
+                            Bestsellers
+                        </span>
+                        <!-- Default Image -->
+                        <img src="./img/change/1.png"
+                            class="w-full h-[346px] transition-opacity duration-500 group-hover:opacity-0">
+
+                        <!-- Hover Image -->
+                        <img src="./img/change/1a.png"
+                            class="w-full h-[346px] absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    </div>
+                    <div class="mt-4 text-sm">
+                        <div class="flex items-center gap-1 text-yellow-500 text-xl">
+                            <div class="flex gap-1">
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                            </div>
+                            <span class="text-black text-lg ml-2">116
+                                Reviews</span>
+                        </div>
+
+                        <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
+                            Family: Fruity/Earthy</p>
+                        <p class="font-bold text-[27px] mt-4">Santorini
+                            Classic Candle</p>
+                        <p class="charam  text-gray-800 mt-4 text-xl">Smells
+                            like an island orchard at fig trees.</p>
+                        <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
+                            5,900.00</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <span class="absolute right-0 bg-white text-2xl px-5 py-2 z-10 text-right">
+                            Bestsellers
+                        </span>
+
+                        <img src="img/change/2.png"
+                            class="w-full h-[346px] group-hover:opacity-0 transition-opacity duration-500">
+                        <img src="img/change/2a.png"
+                            class="w-full absolute inset-0 opacity-0 h-[346px] group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="mt-4 text-sm">
+                        <div class="flex items-center gap-1 text-yellow-500 text-xl">
+                            <div class="flex gap-1">
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                            </div>
+                            <span class="text-black text-lg ml-2">50 Reviews
+                            </span>
+                        </div>
+                        <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
+                            Family: Aquatic </p>
+                        <p class="font-bold text-[27px] mt-4">Scentir
+                            Classic Candle </p>
+                        <p class="charam  text-gray-800 mt-4 text-xl">Smells
+                            like: A clean and salty sea breeze.</p>
+                        <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
+                            5,900.00</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <span class="absolute right-0 bg-white text-2xl px-5 py-2 z-10 text-right">
+                            Bestsellers
+                        </span>
+                        <img src="img/change/3.png"
+                            class="w-full h-[346px] group-hover:opacity-0 transition-opacity duration-500">
+                        <img src="img/change/3a.png"
+                            class="w-full h-[346px] absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <div class="mt-4 text-sm">
+                        <div class="flex items-center gap-1 text-yellow-500 text-xl">
+                            <div class="flex gap-1">
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                            </div>
+                            <span class="text-black text-lg ml-2">60
+                                Reviews</span>
+                        </div>
+
+                        <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
+                            Family: Floral/Citrus</p>
+                        <p class="font-bold text-[27px] mt-4">Love Potion
+                            Candle </p>
+                        <p class="charam  text-gray-800 mt-4 text-xl">Smells
+                            like: Jasmine, Lavender.</p>
+                        <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
+                            5,900.00</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <span class="absolute right-0 bg-white text-2xl px-5 py-2 z-10 text-right">
+                            Bestsellers
+                        </span>
+                        <img src="img/change/4.png"
+                            class="w-full h-[346px] group-hover:opacity-0 transition-opacity duration-500">
+                        <img src="img/change/4a.png"
+                            class="w-full h-[346px] absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="mt-4 text-sm">
+                        <div class="flex items-center gap-1 text-yellow-500 text-xl">
+                            <div class="flex gap-1">
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                            </div>
+                            <span class="text-black text-lg ml-2">87
+                                Reviews</span>
+                        </div>
+                        <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
+                            Family: Leather/Spice</p>
+                        <p class="font-bold text-[27px] mt-4">Brooklyn
+                            Classic Candle </p>
+                        <p class="charam  text-gray-800 mt-4 text-xl">Smells
+                            like: A fancy cocktail at your fave bar.
+                        </p>
+                        <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
+                            5,900.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-20">
+                <button
+                    class="px-16 py-1 border border-black bg-black text-white text-[27px] hover:bg-white hover:text-black transition">
+                    Shop All Bestsellers
+                </button>
+            </div>
+        </section>
+
+
+        <!-- Our Story Section -->
+        <section class="bg-[#FCDFDF] px-4 py-20">
+            <div class="relative max-w-[1320px] mx-auto px-6">
+
+                <h2 class="text-center text-5xl md:text-[52px] font-serif  md:mb-24">
+                    Our Story
+                </h2>
+                <div class="absolute inset-0 flex items-center justify-between pointer-events-none">
+
+                    <button id="storyPrev"
+                        class="pointer-events-auto text-3xl md:text-6xl text-gray-600 hover:text-black transition">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <button id="storyNext"
+                        class="pointer-events-auto text-3xl md:text-6xl text-gray-600 hover:text-black transition">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="overflow-hidden">
+                    <div id="storySlider" class="flex">
+
+                        <div class="min-w-full text-center px-4 md:px-16">
+                            <p class=" text-base md:text-[24px] leading-7 md:leading-[32px] 
+                     max-w-[900px] mx-auto mb-12 md:mb-16">
+                                “They have a wide array of the warm, spicy
+                                and smoky scents that I love.
+                                They’re richly scented but delicate enough
+                                not to aggravate my scent-triggered
+                                migraines (and I find the fellas like them,
+                                too).”
+                            </p>
+                            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-24 
+                      text-xs md:text-xl uppercase tracking-widest">
+                                <figure><img src="./img/story-1.png" alt="img"></figure>
+                                <figure><img src="./img/story2.png" alt="img"></figure>
+                                <figure><img src="./img/story-3.png" alt="img"></figure>
+                            </div>
+                        </div>
+
+                        <div class="min-w-full text-center px-4 md:px-16">
+                            <p class=" text-base md:text-[24px] leading-7 md:leading-[32px] 
+                     max-w-[900px] mx-auto mb-12 md:mb-16">
+                                “They have a wide array of the warm, spicy
+                                and smoky scents that I love.
+                                They’re richly scented but delicate enough
+                                not to aggravate my scent-triggered
+                                migraines (and I find the fellas like them,
+                                too).”
+                            </p>
+                            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-24 
+                      text-xs md:text-xl uppercase tracking-widest">
+                                <figure><img src="./img/story-1.png" alt="img"></figure>
+                                <figure><img src="./img/story2.png" alt="img"></figure>
+                                <figure><img src="./img/story-3.png" alt="img"></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- text section -->
+        <section class="py-20 px-4 border-b border-b-black">
+            <div class="container mx-auto">
+                <div class="max-w-[1400px] mx-auto text-center">
+
+                    <p class=" text-[40px] leading-[44px]">
+                        We are Brooklyn Candle Studio. We create otherworldly botanical
+                        fragrances inspired by the beauty of nature and the wonder of
+                        travel. We pride ourselves on our use of sustainable materials,
+                        ethical production, and meticulous craftsmanship.
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Paraffin Free -->
+        <section class="py-20 px-4">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 text-center">
+
+                <div class="space-y-4">
+                    <img src="./img/Paraffin_Free.png" class="mx-auto w-237" />
+                </div>
+
+                <div class="space-y-4">
+                    <img src="./img/100_-Vegan.png" class="mx-auto w-237" />
+                </div>
+
+                <div class="space-y-4">
+                    <img src="./img/Made-in-Brooklyn.png" class="mx-auto w-237" />
+                </div>
+
+                <div class="space-y-4">
+                    <img src="./img/Phthalate-Free.png" class="mx-auto w-237" />
+                </div>
+
+                <div class="space-y-4">
+                    <img src="./img/Sustainable.png" class="mx-auto w-237" />
+                </div>
+
+                <div class="space-y-4">
+                    <img src="./img/BCS_Iconog.png" class="mx-auto w-237" />
+                </div>
+            </div>
+        </section>
+
+        <!-- last-banner  -->
+        <section class="px-4">
+            <div class="relative w-full h-[543px] md:h-[743px]">
+                <img src="./img/last-banner.png" class="absolute inset-0 w-full h-full object-cover" />
+
+                <div class="relative max-w-[1200px] mx-auto h-full flex flex-col justify-center px-6">
+
+                    <h2 class="text-white text-4xl md:text-[102px]  mb-40">
+                        Subscribe for a surprise.
+                    </h2>
+
+                    <div class="max-w-[480px] text-center ml-auto text-white">
+                        <p class="mb-6 text-3xl">
+                            Receive a curated candle every
+                            month plus a matchbox to light your
+                            new flame for only $35.
+                        </p>
+
+                        <button
+                            class="bg-black text-white px-8 py-3 text-xl font-bold border border-black hover:bg-transparent hover:text-black transition duration-300 mt-4">
+                            Subscribe Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="border-t border-b border-black mt-20 mb-20">
+        <div class="max-w-[1320px] mx-auto px-4 py-14 
+                grid sm:grid-cols-2 lg:grid-cols-4 gap-10 
+                text-base sm:text-lg lg:text-xl arimo">
+            <div>
+                <p class="font-bold text-lg sm:text-xl mb-4">Help</p>
+
+                <ul class="space-y-3 font-semibold">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li class="font-bold mt-3">SHIPPING</li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">SMS Sign Up</a></li>
+                    <li><a href="#">Scent Glossary</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+
+                <ul class="flex gap-6 mt-6">
+                    <li>
+                        <a href="#"><img src="./img/instagram.png" class="w-7 sm:w-9" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/facebook.png" class="w-7 sm:w-9" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/twitter.png" class="w-7 sm:w-9" /></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="font-bold text-lg sm:text-xl mb-4">Discover</p>
+
+                <ul class="space-y-3">
+                    <li><a href="#">Our Store</a></li>
+                    <li><a href="#">Stockists</a></li>
+                    <li><a href="#">All Reviews</a></li>
+                    <li><a href="#">Bulk Gifting</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="font-bold text-lg sm:text-xl mb-4">Company</p>
+
+                <ul class="space-y-3">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Wholesale</a></li>
+                    <li><a href="#">BBB Accredited Business</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-8">
+                <div>
+                    <p class="font-bold text-lg sm:text-xl mb-3">
+                        BROOKLYN CANDLE STUDIO STORE
+                    </p>
+                    <p>
+                        237 36th Street <br>
+                        Brooklyn, NY 11232
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-semibold mb-2">MAILING ADDRESS</p>
+                    <p>
+                        147 41ST Street, Suite BE <br>
+                        Brooklyn, NY 11232
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-bold text-sm sm:text-base mb-3">
+                        Get 30% off on your first order!
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" placeholder="Email Address"
+                            class="px-3 py-2 w-full border border-gray-500 text-sm outline-none" />
+
+                        <button class="bg-black text-white px-2 py-2 text-sm">
+                            SUBSCRIBE
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

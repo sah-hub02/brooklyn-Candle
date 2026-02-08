@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <!-- Top Header -->
+    <div class="bg-black text-white text-center text-2xl inter font-light tracking-widest py-7">
+        <span>COMPLIMENTARY SHIPPING WITH ORDERS $100+</span>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-[#FBF6F6] z-50">
+        <div>
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center px-5 justify-between h-20">
+                    <nav>
+                        <ul class="hidden lg:flex gap-10 text-xl font-normal inter">
+                            <li><a href="index.html" class="hover:underline">HOME</a></li>
+                            <li><a href="shop.html" class="hover:underline">SHOP</a></li>
+                            <li>
+                                <a href="scent.html" class="hover:underline">SHOP BY SCENT</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="hover:underline">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a href="login.html" class="border-b-2 border-black">LOG IN</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="text-center">
+                        <span class="text-2xl font-semibold">BROOKLYN CANDLE</span>
+                        <p class="text-xl leading-normal arimo">STUDIO</p>
+                    </div>
+
+                    <div class="hidden lg:flex items-center space-x-5 text-lg">
+                        <span class="text-xl arimo font-light">HOLIDAY QUIZ</span>
+                        <figure>
+                            <a href="#"><img src="./img/icons/falg.png" alt="India" class="w-8 h-8 object-cover" /></a>
+                        </figure>
+                    </div>
+
+                    <div class="hidden lg:flex items-center space-x-5 text-lg">
+                        <figure>
+                            <a href="#"><img src="./img/icons/user.png" alt="user" /></a>
+                        </figure>
+                        <figure>
+                            <a href="#"><img src="./img/icons/search.png" alt="search" /></a>
+                        </figure>
+                        <figure>
+                            <a href="card.html"><img src="./img/icons/bag.png" alt="bag" /></a>
+                        </figure>
+                        <figure>
+                            <a href="#"><img src="./img/icons/grip.png" alt="grip" /></a>
+                        </figure>
+                    </div>
+
+                    <button id="menuBtn" class="lg:hidden text-2xl">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobileMenu" class="hidden lg:hidden">
+                <nav>
+                    <ul class="flex flex-col items-center py-6 space-y-4 text-sm tracking-wide">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li><a href="scent.html">SHOP BY SCENT</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li>
+                            <a href="login.html" class="border-b-2 border-black">LOG IN</a>
+                        </li>
+                        <li><a href="#">HOLIDAY QUIZ</a></li>
+                    </ul>
+                </nav>
+                <div class="flex flex-row lg:flex justify-center space-x-5 text-lg">
+                    <figure>
+                        <a href="#"><img src="./img/icons/user.png" alt="user" /></a>
+                    </figure>
+                    <figure>
+                        <a href="#"><img src="./img/icons/search.png" alt="search" /></a>
+                    </figure>
+                    <figure>
+                        <a href="card.html"><img src="./img/icons/bag.png" alt="bag" /></a>
+                    </figure>
+                    <figure>
+                        <a href="#"><img src="./img/icons/grip.png" alt="grip" /></a>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-[#EAE0E0] px-4 sm:px-6 lg:px-8 py-8">
+            <div class="min-h-screen flex items-center justify-center">
+                <div class="max-w-[1380px] w-full grid md:grid-cols-2 gap-10 items-center">
+                    <div class="max-w-[560px] w-full mx-auto md:mx-0">
+                        <h2 class="text-3xl sm:text-4xl lg:text-[56px] font-bold arimo mt-5 mb-3">
+                            Welcome Back
+                        </h2>
+                        <p class="text-[#424242] arimo text-base sm:text-lg lg:text-xl mb-10">
+                            Please enter your details
+                        </p>
+                        <button
+                            class="w-full border border-black py-3 text-base sm:text-lg lg:text-xl flex items-center font-medium justify-center gap-3 arimo mb-6 bg-white hover:bg-gray-200 transition">
+                            <img src="./img/google.png" class="w-5" />
+                            Sign in with Google
+                        </button>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="flex-1 h-[1px] bg-gray-400"></div>
+                            <span class="text-lg arimo">or</span>
+                            <div class="flex-1 h-[1px] bg-gray-400"></div>
+                        </div>
+                        <form action="#">
+
+                            <label class="block mb-2 text-base sm:text-lg lg:text-xl arimo font-medium">
+                                Email address
+                            </label>
+
+                            <input type="email"
+                                class="w-full border border-black p-3 mb-5 outline-none focus:border-gray-600" />
+
+                            <label class="block mb-2 text-base sm:text-lg lg:text-xl arimo font-medium">
+                                Password
+                            </label>
+                            <input type="password"
+                                class="w-full border border-black p-3 mb-4 outline-none focus:border-gray-600" />
+
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
+
+                                <label
+                                    class="flex items-center font-medium text-base sm:text-lg lg:text-xl arimo gap-2">
+                                    <input type="checkbox" class="w-4 h-4" />
+                                    Remember me
+                                </label>
+                                <a href="#"
+                                    class="text-blue-500 arimo text-base sm:text-lg lg:text-xl font-medium underline">
+                                    Forgot Password
+                                </a>
+                            </div>
+
+                            <button
+                                class="w-full bg-black text-base sm:text-lg lg:text-xl text-white arimo font-medium py-3 hover:bg-gray-800 transition">
+                                Sign In
+                            </button>
+                            <p
+                                class="text-center arimo font-medium hover:text-gray-500 mt-5 text-base sm:text-lg lg:text-xl">
+                                Don’t have an account?
+                                <a href="#" class="text-blue-500 arimo underline">Sign up</a>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="w-full h-full">
+                        <img src="./img/logo.png"
+                            class="w-full h-[300px] sm:h-[400px] md:h-full object-cover rounded-lg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-300">
+        <div class="max-w-[1320px] mx-auto px-4 py-14 
+                grid sm:grid-cols-2 lg:grid-cols-4 gap-10 
+                text-base sm:text-lg lg:text-xl arimo">
+            <div>
+                <p class="font-bold text-lg sm:text-xl mb-4">Help</p>
+
+                <ul class="space-y-3 font-semibold">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li class="font-bold mt-3">SHIPPING</li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">SMS Sign Up</a></li>
+                    <li><a href="#">Scent Glossary</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+
+                <ul class="flex gap-6 mt-6">
+                    <li>
+                        <a href="#"><img src="./img/instagram.png" class="w-7 sm:w-9" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/facebook.png" class="w-7 sm:w-9" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/twitter.png" class="w-7 sm:w-9" /></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="font-bold text-lg sm:text-xl mb-4">Discover</p>
+
+                <ul class="space-y-3">
+                    <li><a href="#">Our Store</a></li>
+                    <li><a href="#">Stockists</a></li>
+                    <li><a href="#">All Reviews</a></li>
+                    <li><a href="#">Bulk Gifting</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="font-bold text-lg sm:text-xl mb-4">Company</p>
+
+                <ul class="space-y-3">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Wholesale</a></li>
+                    <li><a href="#">BBB Accredited Business</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-8">
+                <div>
+                    <p class="font-bold text-lg sm:text-xl mb-3">
+                        BROOKLYN CANDLE STUDIO STORE
+                    </p>
+                    <p>
+                        237 36th Street <br>
+                        Brooklyn, NY 11232
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-semibold mb-2">MAILING ADDRESS</p>
+                    <p>
+                        147 41ST Street, Suite BE <br>
+                        Brooklyn, NY 11232
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-bold text-sm sm:text-base mb-3">
+                        Get 30% off on your first order!
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" placeholder="Email Address"
+                            class="px-3 py-2 w-full border border-gray-500 text-sm outline-none" />
+
+                        <button class="bg-black text-white px-2 py-2 text-sm">
+                            SUBSCRIBE
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* font-family: "Inter", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+/* font-family: "Charm", cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Bellefair", serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+/* font-family: "Arimo", sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap');
+/* font-family: "Beiruti", sans-serif; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1760px !important;
+}
+
+body {
+    font-family: "Bellefair", serif;
+}
+
+.beiruti{
+    font-family: "Beiruti", sans-serif;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+}
+
+.arimo {
+    font-family: "Arimo", sans-serif;
+}
+
+.charam {
+    font-family: "Charm", cursive;
+}

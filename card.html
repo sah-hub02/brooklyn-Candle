@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Top Header -->
+    <div class="bg-black text-white text-center text-2xl inter font-light tracking-widest py-7">
+        <span>COMPLIMENTARY SHIPPING WITH ORDERS $100+</span>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 bg-[#FBF6F6] z-50">
+        <div>
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center px-5 justify-between h-20">
+                    <nav>
+                        <ul class="hidden lg:flex gap-10 text-xl font-normal inter ">
+                            <li><a href="index.html" class=" hover:underline ">HOME</a></li>
+                            <li><a href="shop.html" class="hover:underline">SHOP</a></li>
+                            <li><a href="scent.html" class="hover:underline">SHOP BY
+                                    SCENT</a></li>
+                            <li><a href="about.html" class="hover:underline">ABOUT
+                                    US</a></li>
+                            <li> <a href="login.html" class="hover:underline">LOG
+                                    IN</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="text-center">
+                        <span class="text-2xl font-semibold ">BROOKLYN
+                            CANDLE</span>
+                        <p class="text-xl leading-normal arimo">STUDIO</p>
+                    </div>
+
+                    <div class="hidden lg:flex items-center space-x-5 text-lg">
+                        <span class="text-xl arimo font-light ">HOLIDAY
+                            QUIZ</span>
+                        <figure><a href="#"><img src="./img/icons/falg.png" alt="India"
+                                    class="w-8 h-8 object-cover"></a>
+                        </figure>
+                    </div>
+
+                    <div class="hidden lg:flex items-center space-x-5 text-lg">
+                        <figure><a href="#"><img src="./img/icons/user.png" alt="user"></a></figure>
+                        <figure><a href="#"><img src="./img/icons/search.png" alt="search"></a></figure>
+                        <figure><a href="card.html"><img src="./img/icons/bag.png" alt="bag"></a></figure>
+                        <figure><a href="#"><img src="./img/icons/grip.png" alt="grip"></a></figure>
+                    </div>
+
+                    <button id="menuBtn" class="lg:hidden text-2xl">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobileMenu" class="hidden lg:hidden">
+                <nav>
+                    <ul class="flex flex-col items-center py-6 space-y-4 text-sm tracking-wide">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li><a href="scent.html">SHOP BY SCENT</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="login.html">LOG IN</a></li>
+                        <li><a href="#">HOLIDAY QUIZ</a></li>
+                    </ul>
+                </nav>
+                <div class="flex flex-row lg:flex justify-center space-x-5 text-lg">
+                    <figure><a href="#"><img src="./img/icons/user.png" alt="user"></a></figure>
+                    <figure><a href="#"><img src="./img/icons/search.png" alt="search"></a></figure>
+                    <figure><a href="card.html"><img src="./img/icons/bag.png" alt="bag"></a></figure>
+                    <figure><a href="#"><img src="./img/icons/grip.png" alt="grip"></a></figure>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- New edition  -->
+        <section class="px-4 py-20">
+            <div class="container mx-auto ">
+                <div class="grid lg:grid-cols-2">
+                    <div class="flex gap-20">
+
+                        <div class="flex flex-col gap-4">
+                            <img src="./img/card/1.png" class="w-[126px] h-[140px] object-cover cursor-pointer thumb">
+                            <img src="./img/card/2.png" class="w-[126px] h-[140px] object-cover cursor-pointer thumb">
+                            <img src="./img/card/3.png" class="w-[126px] h-[140px] object-cover cursor-pointer thumb">
+                        </div>
+
+                        <div class="flex-1">
+                            <img id="mainImage" src="./img/card/big.png" class="w-full max-h-[959px] object-cover">
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 max-w-7xl mx-auto ">
+
+                        <p class="text-2xl mt-5 font-bold border bg-black text-white px-2 py-1 inline-block">NEW LIMITED
+                            EDITION
+                        </p>
+                        <h2 class="text-[44px]  font-bold">Fireplace Holiday Candle</h2>
+                        <div class="flex items-center gap-1 text-yellow-500 text-xl">
+                            <div class="flex gap-1">
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                                <i class="fa-solid fa-star text-black"></i>
+                            </div>
+                            <span class="text-black text-xl ml-2"> 1
+                                Reviews</span>
+                        </div>
+                        <p class="text-3xl font-bold">Rs. 4,400.00</p>
+                        <div>
+                            <p class="text-sm font-bold mb-4">SIZE</p>
+                            <select class="border text-base  px-3 py-2 w-full">
+                                <option>Fireplace Holiday Candle</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <button id="minus" class="border px-3 py-1"><i class="fa-solid fa-minus"></i></button>
+                            <span id="qty">1</span>
+                            <button id="plus" class="border px-3 py-1"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <p class="text-xs underline cursor-pointer ">Can’t decide? Get the bundle.</p>
+                        <div class="space-y-3">
+                            <a href="checkout.html"><button
+                                    class="w-full border hover:bg-gray-300 hover:text-white py-3">ADD TO
+                                    CART</button></a>
+                            <a href="checkout.html"><button
+                                    class="w-full border bg-black hover:bg-white hover:text-black text-white py-3">BUY
+                                    NOW</button></a>
+                            <p class="text-xl underline text-center cursor-pointer">More payment option</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-2xl md:ml-[100px] sm:ml-2 lg:ml-[200px]">
+                    <div class="mt-20  border-t">
+
+                        <div class="border-b py-5">
+                            <button class="flex justify-between w-full text-2xl accordion">
+                                <span>Product Details</span>
+                                <span><i class="fa-solid fa-plus"></i></span>
+                            </button>
+                            <p class="hidden mt-3 text-xl text-gray-600 content">
+                                Luxury candle made with premium wax and fragrance oils.
+                            </p>
+                        </div>
+
+                        <div class="border-b py-5">
+                            <button class="flex justify-between w-full text-2xl accordion">
+                                <span>Candle Care + Safety</span>
+                                <span><i class="fa-solid fa-plus"></i></span>
+                            </button>
+                            <p class="hidden mt-3 text-xl text-gray-600 content">
+                                Trim wick to 1/4 inch before lighting. Never leave unattended.
+                            </p>
+                        </div>
+
+                        <div class="border-b py-5">
+                            <button class="flex justify-between w-full text-2xl accordion">
+                                <span>Shipping + Exchanges</span>
+                                <span><i class="fa-solid fa-plus"></i></span>
+                            </button>
+                            <p class="hidden mt-3 text-xl text-gray-600 content">
+                                Free shipping over ₹2000. Easy exchange within 7 days.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- trip section -->
+        <section class="py-20">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl lg:text-[52px] font-bold mb-20">
+                    Candle Care Tips
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-14">
+
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <img src="./img/card/trip-1.png" class="w-20 h-20 object-contain">
+                        <h3 class="text-xl tracking-[2px] font-semibold">TRIM YOUR WICK</h3>
+                        <p class="text-xs text-gray-500 max-w-[180px]">
+                            Trim wick to 1/4 inch before lighting to ensure a safe clean burn
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <img src="./img/card/trip-2.png" class="w-20 h-20 object-contain">
+                        <h3 class="text-xl tracking-[2px] font-semibold">LIGHT IT UP</h3>
+                        <p class="text-xs text-gray-500 max-w-[180px]">
+                            Burn until wax pool spreads to edge of the container
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <img src="./img/card/trip-3.png" class="w-20 h-20 object-contain">
+                        <h3 class="text-xl tracking-[2px] font-semibold">NEW CANDLE TIME</h3>
+                        <p class="text-xs text-gray-500 max-w-[180px]">
+                            If 1/2 inch wax remains it is time for a new candle
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <img src="./img/card/trip-4.png" class="w-20 h-20 object-contain">
+                        <h3 class="text-xl tracking-[2px] font-semibold">RE-PURPOSE</h3>
+                        <p class="text-xs text-gray-500 max-w-[180px]">
+                            Reuse empty jars as storage containers or decorative vases
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- fireplace section  -->
+        <section class="py-10">
+
+            <div
+                class="relative w-full h-[280px] md:h-[350px] lg:h-[549px] flex items-center justify-center overflow-hidden">
+                <img src="./img/card/banner.png" class="absolute inset-0 w-full h-full object-cover">
+
+                <div class="relative text-center text-white max-w-[1119px] px-6">
+                    <h2 class="text-lg md:text-3xl lg:text-[43px] font-bold mb-12">
+                        Smells like a smoky cabin fireplace.
+                    </h2>
+
+                    <p class="text-[11px] md:text-sm lg:text-[22px]  tracking-wide leading-none">
+                        Kindling made of cedar burns brightly under logs of pine a roaring, crackling blaze emanating
+                        warmth and
+                        comfort. Top notes of resinous spruce and fresh pine open to a woody heart of charred cedar and
+                        sandalwood.
+                        A base of frankincense and myrrh recalls the smoky, earthy aromas of the altar.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paraffin Free -->
+        <section class="py-20 px-4 border-b border-b-gray-300">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 text-center">
+
+                <div class="space-y-4">
+                    <img src="./img/Paraffin_Free.png" class="mx-auto w-237" />
+                </div>
+
+                <div class="space-y-4">
+                    <img src="./img/100_-Vegan.png" class="mx-auto w-237" />
+                </div>
+
+                <div class="space-y-4">
+                    <img src="./img/Made-in-Brooklyn.png" class="mx-auto w-237" />
+                </div>
+
+                <div class="space-y-4">
+                    <img src="./img/Phthalate-Free.png" class="mx-auto w-237" />
+                </div>
+
+                <div class="space-y-4">
+                    <img src="./img/Sustainable.png" class="mx-auto w-237" />
+                </div>
+
+                <div class="space-y-4">
+                    <img src="./img/BCS_Iconog.png" class="mx-auto w-237" />
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Customer Review -->
+        <section class="border-b border-b-gray-300 py-20">
+
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-center text-[41px] font-bold mb-12">
+                    Customer Review
+                </h2>
+
+                <div class="grid md:grid-cols-3 items-center text-center md:text-left gap-10">
+
+                    <div class="space-y-2 md:border-r  md:pr-10">
+
+                        <div class="flex justify-center md:justify-start gap-1 text-black">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <p class="text-xl font-semibold">5.00 out of 5</p>
+                        </div>
+                        <p class="text-xl text-gray-500">Based on 1 review</p>
+                    </div>
+
+                    <div class="space-y-3 md:border-r md:px-10">
+
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1 text-black text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <div class="flex-1 bg-gray-200 h-2 rounded">
+                                <div class="bg-black h-2 w-full rounded"></div>
+                            </div>
+
+                            <span class="text-2xl">1</span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="flex-1 bg-gray-200 h-2 rounded"></div>
+                            <span class="text-2xl">0</span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="flex-1 bg-gray-200 h-2 rounded"></div>
+                            <span class="text-2xl">0</span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="flex-1 bg-gray-200 h-2 rounded"></div>
+                            <span class="text-2xl">0</span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="flex gap-1 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <div class="flex-1 bg-gray-200 h-2 rounded"></div>
+                            <span class="text-2xl">0</span>
+                        </div>
+
+                    </div>
+
+                    <div class="flex justify-center md:justify-end">
+                        <button
+                            class="bg-black border text-white px-20 py-2 hover:bg-white hover:text-black rounded-full text-xl">
+                            Write a Review
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- most recent  -->
+        <section>
+            <div class="border-b py-10">
+                <div class="max-w-7xl mx-auto px-6 relative">
+
+                    <button id="filterBtn" class="flex items-center gap-2 text-3xl font-medium">
+                        Most Recent
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </button>
+
+                    <ul id="filterMenu" class="hidden absolute mt-3 bg-white border shadow w-40 text-xl">
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Most Recent</li>
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Highest Rating</li>
+                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Lowest Rating</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Verified buyer -->
+        <section class=" px-4 py-20">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-black text-xs mb-3">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="flex justify-between items-center mb-2">
+
+                    <div class="flex items-center gap-3">
+                        <i class="fa-regular fa-circle-user text-3xl"></i>
+
+                        <div>
+                            <p class="font-medium text-3xl">Jimm
+                                <span class="text-xl text-gray-500">Verified buyer</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400">10.25.25</p>
+                </div>
+                <p class="text-gray-700 text-sm">Bought all 4 </p>
+                <p class="text-xs text-gray-700 max-w-3xl">
+                    The packaging is so festive chic. You can burn these anytime the scent of clear jars or
+                    something girly fits for the fluidness of candles and scents are beautiful.
+                </p>
+            </div>
+        </section>
+
+        <!-- shop Diffusers -->
+        <section class="px-6 py-16 border-t">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                    <div class="relative group overflow-hidden">
+
+                        <img src="./img/card/5.png"
+                            class="w-full h-[600px] object-cover transition duration-500 group-hover:opacity-0">
+
+                        <img src="./img/card/5a.png"
+                            class="w-full h-[600px] object-cover absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
+
+                        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+                            <a href="shop.html"
+                                class="bg-white text-black text-2xl px-12 py-2 hover:bg-black hover:text-white shadow">
+                                Shop Diffusers
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden">
+
+                        <img src="./img/card/6.png"
+                            class="w-full h-[600px] object-cover transition duration-500 group-hover:opacity-0">
+
+                        <img src="./img/card/6a.png"
+                            class="w-full h-[600px] object-cover absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
+
+                        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+                            <a href="shop.html"
+                                class="bg-white text-black text-2xl px-12 hover:bg-black hover:text-white py-2 shadow">
+                                Shop Diffusers
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden">
+
+                        <img src="./img/card/7.png"
+                            class="w-full h-[600px] object-cover transition duration-500 group-hover:opacity-0">
+
+                        <img src="./img/card/7a.png"
+                            class="w-full h-[600px] object-cover absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
+
+                        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+                            <a href="shop.html"
+                                class="bg-white text-black text-2xl hover:bg-black hover:text-white px-12 py-2 shadow">
+                                Shop Diffusers
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-b border-black mb-20">
+        <div class="max-w-[1320px] mx-auto px-4 py-14 
+                grid sm:grid-cols-2 lg:grid-cols-4 gap-10 
+                text-base sm:text-lg lg:text-xl arimo">
+            <div>
+                <p class="font-bold text-lg sm:text-xl mb-4">Help</p>
+
+                <ul class="space-y-3 font-semibold">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li class="font-bold mt-3">SHIPPING</li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">SMS Sign Up</a></li>
+                    <li><a href="#">Scent Glossary</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+
+                <ul class="flex gap-6 mt-6">
+                    <li>
+                        <a href="#"><img src="./img/instagram.png" class="w-7 sm:w-9" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/facebook.png" class="w-7 sm:w-9" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/twitter.png" class="w-7 sm:w-9" /></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="font-bold text-lg sm:text-xl mb-4">Discover</p>
+
+                <ul class="space-y-3">
+                    <li><a href="#">Our Store</a></li>
+                    <li><a href="#">Stockists</a></li>
+                    <li><a href="#">All Reviews</a></li>
+                    <li><a href="#">Bulk Gifting</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="font-bold text-lg sm:text-xl mb-4">Company</p>
+
+                <ul class="space-y-3">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Wholesale</a></li>
+                    <li><a href="#">BBB Accredited Business</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-8">
+                <div>
+                    <p class="font-bold text-lg sm:text-xl mb-3">
+                        BROOKLYN CANDLE STUDIO STORE
+                    </p>
+                    <p>
+                        237 36th Street <br>
+                        Brooklyn, NY 11232
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-semibold mb-2">MAILING ADDRESS</p>
+                    <p>
+                        147 41ST Street, Suite BE <br>
+                        Brooklyn, NY 11232
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-bold text-sm sm:text-base mb-3">
+                        Get 30% off on your first order!
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" placeholder="Email Address"
+                            class="px-3 py-2 w-full border border-gray-500 text-sm outline-none" />
+
+                        <button class="bg-black text-white px-2 py-2 text-sm">
+                            SUBSCRIBE
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/card.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
