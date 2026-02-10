@@ -66,7 +66,7 @@
                     <ul class="flex flex-col items-center py-6 space-y-4 text-sm tracking-wide">
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="shop.html">SHOP</a></li>
-                        <li><a href="shop.html" class="border-b-2 border-black">SHOP BY SCENT</a></li>
+                        <li><a href="scent.html" class="border-b-2 border-black">SHOP BY SCENT</a></li>
                         <li><a href="about.html">ABOUT US</a></li>
                         <li><a href="login.html">LOG IN</a></li>
                         <li><a href="#">HOLIDAY QUIZ</a></li>
@@ -86,7 +86,7 @@
     <main>
         <!-- Hero Section -->
         <section class="relative">
-            <img src="./img/about/about-banner.png" class="w-full h-[641px] md:h-[540pxpx] object-cover" />
+            <img src="./img/shop/about-banner.png" class="w-full h-[641px] md:h-[540pxpx] object-cover" />
 
             <h1 class="absolute inset-0 flex items-center justify-center 
                text-white text-4xl font-bold md:text-7xl font-bold ">
@@ -95,7 +95,7 @@
         </section>
 
         <!-- card shop section  -->
-        <section class="py-10 px-4">
+        <section class="py-16 px-4">
             <div class="container mx-auto">
                 <p class="text-center max-w-[1631px]  mx-auto text-2xl font-bold leading-relaxed mb-20">
                     Our otherworldly candles are inspired by the beauty of nature and the wonder of travel. Transport
@@ -103,741 +103,853 @@
                     Florence, an upstate country house dripping with lilac in the Spring, or whatever olfactory fantasy
                     your heart desires.
                 </p>
-
-                <div class="flex gap-4 mb-12">
+                <div class="flex gap-4 mb-10">
                     <div class="relative">
                         <button id="sortBtn"
-                            class="border border-black px-6 py-2 font-light text-lg arimo hover:bg-black hover:text-white transition">
+                            class="border border-black px-6 py-2 hover:bg-black hover:text-white text-xl transition">
                             Sort by <i class="fa-solid fa-chevron-down"></i>
                         </button>
 
-                        <div id="sortMenu" class="hidden absolute left-0 mt-2 w-44 bg-white border shadow-lg z-50">
+                        <div id="sortMenu" class="hidden absolute bg-white border shadow w-44 mt-2 z-50">
 
-                            <p class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Price Low → High</p>
-                            <p class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Price High → Low</p>
-                            <p class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Newest</p>
+                            <p class="px-4 py-2 cursor-pointer hover:bg-gray-100 sort-option" data-sort="low">
+                                Price Low → High
+                            </p>
+
+                            <p class="px-4 py-2 cursor-pointer hover:bg-gray-100 sort-option" data-sort="high">
+                                Price High → Low
+                            </p>
+
+                            <p class="px-4 py-2 cursor-pointer hover:bg-gray-100 sort-option" data-sort="new">
+                                Newest
+                            </p>
+
                         </div>
                     </div>
 
                     <div class="relative">
                         <button id="filterBtn"
-                            class="border border-black px-10 arimo py-2 text-lg font-light hover:bg-black hover:text-white transition">
+                            class="border border-black px-9 py-2 hover:bg-black text-xl hover:text-white transition">
                             Filters
                         </button>
 
-                        <div id="filterMenu" class="hidden absolute left-0 mt-2 w-44 bg-white border shadow-lg z-50">
-                            <p class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Fruity</p>
-                            <p class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Earthy</p>
-                            <p class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Aquatic</p>
+                        <div id="filterMenu" class="hidden absolute bg-white border shadow w-44 mt-2 z-50">
+
+                            <p class="px-4 py-2 cursor-pointer hover:bg-gray-100 filter-option" data-filter="Fruity">
+                                Fruity</p>
+                            <p class="px-4 py-2 cursor-pointer hover:bg-gray-100 filter-option" data-filter="Earthy">
+                                Earthy</p>
+                            <p class="px-4 py-2 cursor-pointer hover:bg-gray-100 filter-option" data-filter="Aquatic">
+                                Aquatic</p>
+                            <p class="px-4 py-2 cursor-pointer hover:bg-gray-100 filter-option" data-filter="all">All
+                            </p>
+
                         </div>
                     </div>
+
                 </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="productGrid">
 
+                    <!-- CARD -->
+                    <div class="product group relative" data-price="5900" data-category="Fruity">
 
-                <!-- PRODUCT SECTION -->
-                <div class="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 gap-10">
-                    <!-- CARD 1 -->
-                    <div>
-                        <div class="group relative overflow-hidden w-full">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/1.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
+                        </div>
 
-                            <img src="./img/about/1.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[220px]">
 
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
 
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
 
                         </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 5,900.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 2 -->
-                    <div>
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/2.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="4200" data-category="Earthy">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/2.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 4,200.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 3 -->
-                    <div>
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/3.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="6500" data-category="Aquatic">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/3.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 6,500.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 4 -->
-                    <div>
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/4.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="3000" data-category="Fruity">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/4.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 3,000.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 5 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/1.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="4000" data-category="Earthy">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/5.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 4,000.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 6 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/6.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="7000" data-category="Aquatic">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/6.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 7,000.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 7 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/7.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="4999" data-category="Earthy">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/7.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 4,999.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 8 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/8.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="3999" data-category="Fruity">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/8.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 3,999.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 9 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/9.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="3780" data-category="Aquatic">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/9.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 3,780.00
+                            </p>
+
                         </div>
                     </div>
 
 
-                    <!-- CARD 10 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/10.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="3099" data-category="Fruity">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/10.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 3,099.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 11 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/11.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="3100" data-category="Aquatic">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/11.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 3,100.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 12 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/12.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="4500" data-category="Earthy">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/12.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 4,500.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 13 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/13.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="6500" data-category="Fruity">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/13.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 6,500.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 14 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/14.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="6210" data-category="Aquatic">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/14.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 6,210.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 15 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/15.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="2500" data-category="Earthy">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/15.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 2,500.00
+                            </p>
+
                         </div>
                     </div>
 
-                    <!-- CARD 16 -->
-                    <div class="mt-[100px]">
-                        <div class="group relative overflow-hidden w-full">
-
-                            <img src="./img/about/16.png"
-                                class="w-full h-[320px] sm:h-[380px] md:h-[420px] lg:h-[504px] object-cover transition duration-500 group-hover:scale-110" />
-
-                            <div
-                                class="absolute inset-0 flex items-center justify-center lg:gap-24 sm:gap-16 opacity-0 group-hover:opacity-100 transition">
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow  ">
-                                    <a href="#"><i class="fa-regular fa-heart text-lg"></i></a>
-                                </button>
-
-                                <button class="bg-white px-6 py-5 rounded-full shadow ">
-                                    <a href="card.html"> <i class="fa-solid fa-bag-shopping text-lg"></i></a>
-                                </button>
-                            </div>
-
+                    <div class="product group relative" data-price="3199" data-category="Fruity">
+                        <div class="overflow-hidden">
+                            <img src="./img/shop/16.png"
+                                class="w-full h-[501px] object-cover transform transition duration-500 group-hover:scale-110">
                         </div>
+
+                        <div class="absolute inset-0 flex items-center justify-center gap-20  
+                            opacity-0 group-hover:opacity-100 transition duration-300 mb-[200px]">
+
+                            <a href="#" class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-regular fa-heart text-lg"></i>
+                            </a>
+
+                            <a href="card.html"
+                                class="bg-white px-6 py-5 rounded-full shadow hover:scale-110 transition">
+                                <i class="fa-solid fa-bag-shopping text-lg"></i>
+                            </a>
+                        </div>
+
                         <div class="mt-4 text-sm">
-                            <div class="flex items-center gap-1 text-yellow-500 text-xl">
-                                <div class="flex gap-1">
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
-                                    <i class="fa-solid fa-star text-black"></i>
+                            <div class="flex items-center gap-1 text-xl">
+                                <div class="flex gap-1 text-black">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <span class="text-black text-lg ml-2">116
-                                    Reviews</span>
+                                <span class="text-black text-lg ml-2">116 Reviews</span>
                             </div>
 
-                            <p class="text-gray-800 beiruti text-[22px] mt-3">Scent
-                                Family: Fruity/Earthy</p>
-                            <p class="font-bold text-[27px] mt-4">Santorini
-                                Classic Candle</p>
-                            <p class="charam  text-gray-800 mt-4 text-xl">Smells
-                                like an island orchard at fig trees.</p>
-                            <p class="text-[25px] text-gray-800 font-normal arimo mt-4 mb-10">Rs.
-                                5,900.00</p>
+                            <p class="text-gray-800 text-[22px] mt-3">
+                                Scent Family: Fruity/Earthy
+                            </p>
+
+                            <p class="font-bold text-[27px] mt-4">
+                                Santorini Classic Candle
+                            </p>
+
+                            <p class="text-gray-800 mt-4 text-xl">
+                                Smells like an island orchard at fig trees.
+                            </p>
+
+                            <p class="text-[25px] text-gray-800 font-normal mt-4 mb-10">
+                                Rs. 4,200.00
+                            </p>
                         </div>
                     </div>
                 </div>
